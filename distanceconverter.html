@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="bg-red-500 text-center text-white">Assignment 1</div>
+    </header>
+
+    <nav>
+        <div class="bg-gray-200 p-6 flex text-left space-x-10 text-xl font-bold text-black">
+            <a href="index.html" class="text-black hover:text-red-600 text-xl">Home</a>
+            <a href="weightconverter.html" class="text-black hover:text-red-600 text-xl">Weight Converter</a>
+            <a href="tempratureconverter.html" class="text-black hover:text-red-600 text-xl">Temperature Converter</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="bg-white p-10 text-black">
+            <h1 class="text-center text-3xl font-bold">Distance Converter</h1>
+        </div>
+
+        <div class="flex-col flex border-spacing-8 text-black items-center">
+            <form class="items-center">
+                <label class="font-bold">From</label>
+                <select id="fromUnit" class="border rounded">
+                    <option value="">---Select From---</option>
+                    <option value="mile">Miles</option>
+                    <option value="kilometer">Kilometer</option>
+                </select>
+
+                <label class="font-bold">To</label>
+                <select id="toUnit" class="border rounded">
+                    <option value="">---Select From---</option>
+                    <option value="mile">Mile</option>
+                    <option value="kilometer">Kilometer</option>
+                </select>
+
+                <label for="fromValue" class="font-bold mb-2">Amount</label>
+                <input type="number" id="fromValue" size="16" min="1" max="10000000" class="border border-double rounded">
+
+                <div class="flex justify-center">
+                    <button onclick="convertDistance(event)" class="bg-black text-white px-2 py-1 mr-4 mt-4 hover:bg-red-600 rounded">Submit</button>
+                    <button onclick="resetForm()" class="bg-black text-white px-4 py-1 mt-4 hover:bg-red-600 rounded">Reset</button>
+                </div>
+                <div class=" felx text-center pt-8 text-2xl font-bold pr-4"> 
+                    <h2 class="text-black"> <span id="conversionResult"></span></h2>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="bg-red-500 flex-col text-center mt-96 text-white">Made By All The Members of Group 3 2023</div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
